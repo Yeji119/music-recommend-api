@@ -13,14 +13,10 @@ export default async function handler(req, res) {
     return res.status(200).end();
   }
 
-  /*const {mood} = req.body;
+const {mood} = req.body;
   if (!mood) {
     return res.status(400).json({ error: "기분 또는 상황(mood)을 입력해주세요." });
   }
-  */
-
-  // 임시 하드코딩된 입력값 (테스트용)
-  const mood = "비 오는 날 듣기 좋은 감성적인 노래";
   try {
     const prompt = `
 "${mood}" 분위기에 어울리는 락 음악을 3곡 추천해줘. 가수-제목만 간단히 알려줘.
